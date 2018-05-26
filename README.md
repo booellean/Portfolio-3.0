@@ -1,7 +1,6 @@
 # **Portfolio 3.0**
 
 ## 3rd installment of the series!
----
 
 The following portfolio showcases the following skills
 
@@ -31,5 +30,5 @@ Then the bird said “Nevermore.”
 
 [angular-cli-ghpages]: https://github.com/angular-schule/angular-cli-ghpages
 [angular-cli]: https://github.com/angular/angular-cli
-[mock-up]: https://imgur.com/ou3SKzZ
+[mock-up]: https://i.imgur.com/ou3SKzZ.png
 [the-raven]: https://en.wikipedia.org/wiki/The_Raven
