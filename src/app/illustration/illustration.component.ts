@@ -152,4 +152,8 @@ export class IllustrationComponent implements OnInit {
   ngOnInit() {
   }
 
+  launchLightBox(i){
+    
+  }
+
 }

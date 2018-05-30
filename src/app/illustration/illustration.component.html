@@ -1,4 +1,4 @@
-<article>
+<main id="portfolio-content">
   <header id=skills>
     <h1>Illustration</h1>
     <ul id="skillset">
@@ -12,10 +12,8 @@
 
     </ul>
   </header>
-</article>
-<main id="portfolio-content">
     <article>
-        <figure *ngFor="let study of doodles">
+        <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(i)">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                       {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                       {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -75,3 +73,19 @@
                   </figure>
               </article>
 </main>
+<div id="dark-box" class="hide">
+    <figure id="image-container">
+        <img id="image-swap">
+        <figcaption id="text-container">
+            <h1 id="swap-h1"></h1>
+            <p id="swap-p"></p>
+            <footer>
+                <nav>
+                    <ul id="redirect-links">
+                    </ul>
+                </nav>
+            </footer>
+        </figcaption>
+    </figure>
+    <img src="images/cross.svg" id="cross"/>
+</div>
