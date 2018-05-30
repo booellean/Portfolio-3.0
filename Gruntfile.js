@@ -4,27 +4,22 @@ module.exports = function (grunt) {
       dev: {
         options: {
           sizes: [{
-            name: 'x-small',
             width: 200,
             suffix: "-200",
             quality: 85
           }, {
-            name: 'small',
             width: 400,
             suffix: "-400",
             quality: 85
           }, {
-            name: 'med',
             width: 600,
             suffix: "-600",
             quality: 85
           }, {
-            name: "large",
             width: 800,
             suffix: "-800",
             quality: 85
           }, {
-            name: "x-large",
             width: 1100,
             quality: 85
           }]
@@ -32,18 +27,18 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           src: ['*.{jpg,gif,png}'],
-          cwd: 'src/assets/images/design/',
-          dest: 'src/assets/images/design-RAW/'
+          cwd: 'src/assets/images/design-RAW/',
+          dest: 'src/assets/images/design/'
         }, {
           expand: true,
           src: ['*.{jpg,gif,png}'],
-          cwd: 'src/assets/images/illustration/',
-          dest: 'src/assets/images/illustration-RAW/'
+          cwd: 'src/assets/images/illustration-RAW/',
+          dest: 'src/assets/images/illustration/'
         }, {
           expand: true,
           src: ['*.{jpg,gif,png}'],
-          cwd: 'src/assets/images/webdev/',
-          dest: 'src/assets/images/webdev-RAW/'
+          cwd: 'src/assets/images/webdev-RAW/',
+          dest: 'src/assets/images/webdev/'
         }]
       }
     },
