@@ -14,8 +14,8 @@
   </header>
 </article>
 <main id="portfolio-content">
-    <article *ngFor="let design in banners">
-        <figure>
+    <article>
+        <figure *ngFor="let design of banners">
           <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                       {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                       {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -29,8 +29,8 @@
               src="{{imagePath}}{{design.name}}-1100{{design.fileType}}" alt="{{design.alt}}">
           </figure>
         </article>
-        <article *ngFor="let design in logos">
-            <figure>
+        <article>
+            <figure *ngFor="let design of logos">
               <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                           {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                           {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -44,8 +44,8 @@
                   src="{{imagePath}}{{design.name}}-1100{{design.fileType}}" alt="{{design.alt}}">
               </figure>
           </article>
-          <article *ngFor="let design in icons">
-              <figure>
+          <article>
+              <figure *ngFor="let design of icons">
                 <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                             {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                             {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -59,8 +59,8 @@
                     src="{{imagePath}}{{design.name}}-1100{{design.fileType}}" alt="{{design.alt}}">
                 </figure>
             </article>
-            <article *ngFor="let design in layouts">
-                <figure>
+            <article>
+                <figure *ngFor="let design of layouts">
                   <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                               {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                               {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,

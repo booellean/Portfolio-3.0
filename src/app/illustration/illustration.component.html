@@ -14,8 +14,8 @@
   </header>
 </article>
 <main id="portfolio-content">
-    <article *ngFor="let study in doodles">
-        <figure>
+    <article>
+        <figure *ngFor="let study of doodles">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                       {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                       {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -29,8 +29,8 @@
               src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
           </figure>
         </article>
-        <article *ngFor="let study in inks">
-            <figure>
+        <article>
+            <figure *ngFor="let study of inks">
               <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                           {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                           {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -44,8 +44,8 @@
                   src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
               </figure>
           </article>
-          <article *ngFor="let study in colorPencil">
-              <figure>
+          <article>
+              <figure *ngFor="let study of colorPencil">
                 <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                             {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                             {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -59,8 +59,8 @@
                     src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
                 </figure>
             </article>
-            <article *ngFor="let study in characterStudy">
-                <figure>
+            <article>
+                <figure *ngFor="let study of characterStudy">
                   <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                               {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                               {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,

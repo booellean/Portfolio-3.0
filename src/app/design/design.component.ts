@@ -20,7 +20,7 @@ export class DesignComponent implements OnInit {
      description: `A general, all-purpose banner to be used in social media and other personal advertising platforms. This banner is designed to illustrate my love for programming and my love for the aesthetic arts. Because I have trouble with "technical" shapes by nature, I made this image by first taking a picture of a tree, masking it to a high contrast black and white format, and then using Photoshop's mosaic filter to "pixelate" the image. By having black and white sections to visualize, I was then able to see the composition I was looking for. Each shape and line was made indivudally using Adobe Illustrator, and ultimately the composition, space, and color balance are all made to direct your eyes to a small heart-shaped object in the lower left hand corner.`,
      date: 20180420
   },{
-    name: 'thevulpeventure',
+    name: 'banner-thevulpeventure',
     alt: 'This banner is for a vegan blogging site and showcases various foods and images of Ms. Vulpe.',
     fileType: '.jpg',
     link: 'https://thevulpeventure.com',
@@ -46,8 +46,8 @@ export class DesignComponent implements OnInit {
   }];
 
   logos =[{
-    name: 'trefoil-agriculture',
-    alt: 'The logo for thevulpeventure.com. Composed of a fox, compass, beats and kale to represent the journy of Ms. Vulpe',
+    name: 'trefoil-agriculture-logo',
+    alt: 'The logo for Trefoil Cultural and Environmental. It is composed of its 3 intials as a trefoil',
     fileType: '.png',
     link: 'https://trefoilcultural.com/',
     title: 'Trefoil Cultural and Environmental',
@@ -120,7 +120,7 @@ export class DesignComponent implements OnInit {
     description: `The Urban Indian Health Institute needed 12 icons with a 4 color palette in 48 hours. These icons are for their 2017 Aggregate Diabetes Report. This was one of the most challenging projects I have worked on due to the tight deadline. Overall, I am very happy with the final product. I urge you to click on the report link to see how the icons flow with the report composition. This infographic is used for tobacco screening.`,
     date: 20171107
   },{
-    name: 'uihi-icon-kidney',
+    name: 'uihi-icon-kidneys',
     alt: 'Diabetes Report Iconography - Kidneys',
     fileType: '.png',
     link: 'http://www.uihi.org/wp-content/uploads/2017/11/2016_Diabetes_Update_Electronic.pdf',

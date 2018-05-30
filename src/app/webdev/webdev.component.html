@@ -14,8 +14,8 @@
 </article>
 
 <main id="portfolio-content">
-  <article *ngFor="let site of wordpress">
-    <figure>
+  <article>
+    <figure *ngFor="let site of wordpress">
       <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                   {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,
                   {{imagePath}}{{site.name}}-600{{site.fileType}} 600w,
@@ -29,8 +29,8 @@
           src="{{imagePath}}{{site.name}}-1100{{site.fileType}}" alt="{{site.alt}}">
       </figure>
     </article>
-    <article *ngFor="let site of staticPages">
-      <figure>
+    <article>
+      <figure *ngFor="let site of staticPages">
         <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                     {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,
                     {{imagePath}}{{site.name}}-600{{site.fileType}} 600w,

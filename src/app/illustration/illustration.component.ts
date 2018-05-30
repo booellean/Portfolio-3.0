@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IllustrationComponent implements OnInit {
 
-  imagePath = 'assets/images/ilustration/';
+  imagePath = 'assets/images/illustration/';
 
   doodles =[{
     name: 'doodle-old-lady',
