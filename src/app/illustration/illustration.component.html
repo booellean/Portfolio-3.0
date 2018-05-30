@@ -14,7 +14,64 @@
   </header>
 </article>
 <main id="portfolio-content">
-  <article>
-
-  </article>
+    <article *ngFor="let study in doodles">
+        <figure>
+          <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
+                      {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
+                      {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
+                      {{imagePath}}{{study.name}}-800{{study.fileType}} 800w,
+                      {{imagePath}}{{study.name}}-1100{{study.fileType}}"
+              sizes="(max-width: 300px) 200px,
+                    (max-width: 400px) 400px,
+                    (max-width: 600px) 600px,
+                    (max-width: 800px) 800px,
+                    1100px"
+              src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
+          </figure>
+        </article>
+        <article *ngFor="let study in inks">
+            <figure>
+              <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
+                          {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
+                          {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
+                          {{imagePath}}{{study.name}}-800{{study.fileType}} 800w,
+                          {{imagePath}}{{study.name}}-1100{{study.fileType}}"
+                  sizes="(max-width: 300px) 200px,
+                        (max-width: 400px) 400px,
+                        (max-width: 600px) 600px,
+                        (max-width: 800px) 800px,
+                        1100px"
+                  src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
+              </figure>
+          </article>
+          <article *ngFor="let study in colorPencil">
+              <figure>
+                <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
+                            {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
+                            {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
+                            {{imagePath}}{{study.name}}-800{{study.fileType}} 800w,
+                            {{imagePath}}{{study.name}}-1100{{study.fileType}}"
+                    sizes="(max-width: 300px) 200px,
+                          (max-width: 400px) 400px,
+                          (max-width: 600px) 600px,
+                          (max-width: 800px) 800px,
+                          1100px"
+                    src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
+                </figure>
+            </article>
+            <article *ngFor="let study in characterStudy">
+                <figure>
+                  <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
+                              {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
+                              {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
+                              {{imagePath}}{{study.name}}-800{{study.fileType}} 800w,
+                              {{imagePath}}{{study.name}}-1100{{study.fileType}}"
+                      sizes="(max-width: 300px) 200px,
+                            (max-width: 400px) 400px,
+                            (max-width: 600px) 600px,
+                            (max-width: 800px) 800px,
+                            1100px"
+                      src="{{imagePath}}{{study.name}}-1100{{study.fileType}}" alt="{{study.alt}}">
+                  </figure>
+              </article>
 </main>
