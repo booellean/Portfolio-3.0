@@ -152,8 +152,67 @@ export class IllustrationComponent implements OnInit {
   ngOnInit() {
   }
 
-  launchLightBox(i){
+  launchLightBox(arr, i){
+    let drkBox = document.getElementById('dark-box');
+    let imgCont = document.getElementById('image-swap');
+    let figCap = document.getElementById('text-container');
+    let h1Cont = document.getElementById('swap-h1');
+    let pCont = document.getElementById('swap-p');
+    let reDir = document.getElementById('redirect-links');
     
+    imgCont.src = `${this.imagePath}${arr[i].name}-1100${arr[i].fileType}`;
+    imgCont.srcset= `${this.imagePath}${arr[i].name}-200${name+arr[i].fileType} 200w,
+                     ${this.imagePath}${arr[i].name}-400${name+arr[i].fileType} 400w,
+                     ${this.imagePath}${arr[i].name}-600${name+arr[i].fileType} 600w,
+                     ${this.imagePath}${arr[i].name}-800${name+arr[i].fileType} 800w,
+                     ${this.imagePath}${arr[i].name}-1100${name+arr[i].fileType}`;
+    imgCont.sizes = `(max-width: 300px) 200px,
+                     (max-width: 400px) 400px,
+                     (max-width: 600px) 600px,
+                     (max-width: 800px) 800px,
+                     1100px`;
+    pCont.innerHTML = arr[i].description;
+    h1Cont.innerHTML = arr[i].title;
+
+    drkBox.classList.remove('hide');
+  }
+
+  closeImageBox() {
+    var drkBox = document.getElementById('dark-box');
+    drkBox.classList.add('hide');
+  }
+
+  detectAspectRatio() {
+    let imageContainer = document.getElementById('image-container');
+  
+    //all variables below are for determining ratios between images, screen sizes and the figure container
+  
+    let isWidth = document.getElementById('image-swap').clientWidth;
+    let isHeight = document.getElementById('image-swap').clientHeight;
+    let isRatio = isWidth/isHeight;
+  
+    let figWidth = document.getElementById('text-container').clientWidth;
+    let figHeight = document.getElementById('text-container').clientHeight;
+  
+    let contWidth = document.getElementById('image-swap').clientWidth + 480; //number is minimum width I want the figcaption to be at .left
+    let contRatio = contWidth/figHeight;
+  
+    let winWidth = window.innerWidth;
+    let winHeight = window.innerHeight;
+    let winRatio = winWidth/winHeight;
+  
+    if(contRatio>=1){
+     if(winRatio>(isRatio + .35)){  //.35 helps keep the figcaption a readable width
+        imageContainer.classList.remove('wide');
+        imageContainer.classList.add('tall');
+      }else{
+        imageContainer.classList.remove('tall');
+        imageContainer.classList.add('wide');
+      }
+    }else{
+      imageContainer.classList.remove('tall');
+      imageContainer.classList.add('wide');
+    }
   }
 
 }

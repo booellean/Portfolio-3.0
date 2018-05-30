@@ -12,7 +12,7 @@
     </ul>
   </header>
   <article>
-    <figure *ngFor="let site of wordpress">
+    <figure *ngFor="let site of wordpress; let i = index" (click)="launchLightBox(wordpress, i)">
       <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                   {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,
                   {{imagePath}}{{site.name}}-600{{site.fileType}} 600w,
@@ -27,7 +27,7 @@
       </figure>
     </article>
     <article>
-      <figure *ngFor="let site of staticPages">
+      <figure *ngFor="let site of staticPages; let i = index" (click)="launchLightBox(staticPages, i)">
         <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                     {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,
                     {{imagePath}}{{site.name}}-600{{site.fileType}} 600w,
@@ -44,7 +44,7 @@
 </main>
 <div id="dark-box" class="hide">
   <figure id="image-container">
-      <img id="image-swap">
+    <img id="image-swap" (load)="detectAspectRatio()">
       <figcaption id="text-container">
           <h1 id="swap-h1"></h1>
           <p id="swap-p"></p>
@@ -56,5 +56,5 @@
           </footer>
       </figcaption>
   </figure>
-  <img src="images/cross.svg" id="cross"/>
+  <img src="images/cross.svg" id="cross" (click)="closeImageBox()"/>
 </div>

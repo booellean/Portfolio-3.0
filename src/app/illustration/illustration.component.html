@@ -13,7 +13,7 @@
     </ul>
   </header>
     <article>
-        <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(i)">
+        <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(doodles, i)">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                       {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                       {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -28,7 +28,7 @@
           </figure>
         </article>
         <article>
-            <figure *ngFor="let study of inks">
+            <figure *ngFor="let study of inks; let i = index" (click)="launchLightBox(inks, i)">
               <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                           {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                           {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -43,7 +43,7 @@
               </figure>
           </article>
           <article>
-              <figure *ngFor="let study of colorPencil">
+              <figure *ngFor="let study of colorPencil; let i = index" (click)="launchLightBox(colorPencil, i)">
                 <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                             {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                             {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -58,7 +58,7 @@
                 </figure>
             </article>
             <article>
-                <figure *ngFor="let study of characterStudy">
+                <figure *ngFor="let study of characterStudy; let i = index" (click)="launchLightBox(characterStudy, i)">
                   <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                               {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                               {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -75,7 +75,7 @@
 </main>
 <div id="dark-box" class="hide">
     <figure id="image-container">
-        <img id="image-swap">
+        <img id="image-swap" (load)="detectAspectRatio()">
         <figcaption id="text-container">
             <h1 id="swap-h1"></h1>
             <p id="swap-p"></p>
@@ -87,5 +87,5 @@
             </footer>
         </figcaption>
     </figure>
-    <img src="images/cross.svg" id="cross"/>
+    <img src="images/cross.svg" id="cross" (click)="closeImageBox()"/>
 </div>
