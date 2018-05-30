@@ -5,19 +5,15 @@ module.exports = function (grunt) {
         options: {
           sizes: [{
             width: 200,
-            suffix: "-200",
             quality: 85
           }, {
             width: 400,
-            suffix: "-400",
             quality: 85
           }, {
             width: 600,
-            suffix: "-600",
             quality: 85
           }, {
             width: 800,
-            suffix: "-800",
             quality: 85
           }, {
             width: 1100,
