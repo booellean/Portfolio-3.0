@@ -1,6 +1,4 @@
-grunt.loadNpmTasks('grunt-responsive-images');
-
-export default function (grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     responsive_images: {
       dev: {
@@ -74,7 +72,7 @@ export default function (grunt) {
       },
     },
   });
-  
+
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
