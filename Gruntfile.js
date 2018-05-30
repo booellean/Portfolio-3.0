@@ -21,6 +21,7 @@ module.exports = function (grunt) {
             quality: 85
           }, {
             width: 1100,
+            suffix: '',
             quality: 85
           }]
         },
