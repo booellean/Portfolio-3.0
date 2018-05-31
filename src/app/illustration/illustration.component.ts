@@ -174,11 +174,35 @@ export class IllustrationComponent implements OnInit {
     pCont.innerHTML = arr[i].description;
     h1Cont.innerHTML = arr[i].title;
 
+    /*generating footer links for image-box*/
+
+    if(arr[i].link === 'none'){
+      return;
+    }else{
+      let webI = document.createElement('i');
+      let webA = document.createElement('a');
+      let webLink = document.createElement('li');
+
+      webI.className = 'fas fa-share-square';
+      webA.href= arr[i].link;
+      webA.target = '_blank';
+      webLink.id = 'web-link';
+
+      webA.appendChild(webI);
+      webLink.appendChild(webA);
+
+      reDir.appendChild(webLink);
+    }
+
     drkBox.classList.remove('hide');
   }
 
   closeImageBox() {
-    var drkBox = document.getElementById('dark-box');
+    let drkBox = document.getElementById('dark-box');
+    let reDir = document.getElementById('redirect-links');
+    let webLink = document.getElementById('web-link');
+
+    reDir.removeChild(webLink);
     drkBox.classList.add('hide');
   }
 
