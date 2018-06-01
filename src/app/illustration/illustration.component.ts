@@ -160,17 +160,17 @@ export class IllustrationComponent implements OnInit {
     let pCont = document.getElementById('swap-p');
     let reDir = document.getElementById('redirect-links');
     
-    imgCont.src = `${this.imagePath}${arr[i].name}-1100${arr[i].fileType}`;
-    imgCont.srcset= `${this.imagePath}${arr[i].name}-200${name+arr[i].fileType} 200w,
+    imgCont.setAttribute('src', `${this.imagePath}${arr[i].name}-1100${arr[i].fileType}`);
+    imgCont.setAttribute('srcset', `${this.imagePath}${arr[i].name}-200${name+arr[i].fileType} 200w,
                      ${this.imagePath}${arr[i].name}-400${name+arr[i].fileType} 400w,
                      ${this.imagePath}${arr[i].name}-600${name+arr[i].fileType} 600w,
                      ${this.imagePath}${arr[i].name}-800${name+arr[i].fileType} 800w,
-                     ${this.imagePath}${arr[i].name}-1100${name+arr[i].fileType}`;
-    imgCont.sizes = `(max-width: 300px) 200px,
+                     ${this.imagePath}${arr[i].name}-1100${name+arr[i].fileType}`);
+    imgCont.setAttribute('sizes', `(max-width: 300px) 200px,
                      (max-width: 400px) 400px,
                      (max-width: 600px) 600px,
                      (max-width: 800px) 800px,
-                     1100px`;
+                     1100px`);
     pCont.innerHTML = arr[i].description;
     h1Cont.innerHTML = arr[i].title;
 
