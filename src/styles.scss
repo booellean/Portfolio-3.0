@@ -1,1 +1,78 @@
-/* You can add global styles to this file, and also import other style files */
+/*Global variables*/
+$fallback-font: Arial, Helvetica, sans-serif;
+
+/*Prefixes o ms webkit moz*/
+
+/* Global stylings for pages*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+header#page-header {
+    background: rgba(2, 201, 187, 1);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
+    z-index: 500;
+    nav {
+        ul{
+            display: flex;
+            li{
+                list-style: none;
+                flex-flow: row wrap;
+            }
+        }
+    }
+}
+
+header#skills {
+    background: rgba(177, 237, 242, 1);
+    position: fixed;
+    height: 100%;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 80% 0%);
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+footer#page-footer{
+    background: rgba(2, 201, 187, 1);
+}
+
+figcaption#text-container{
+    footer{
+        nav{
+            ul{
+                li{
+                    list-style: none;
+                }
+            }
+        }
+    }
+}
+
+nav#social-footer{
+    ul{
+        li{
+            list-style: none;
+        }
+    }
+}
