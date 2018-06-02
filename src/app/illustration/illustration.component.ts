@@ -133,7 +133,7 @@ export class IllustrationComponent implements OnInit {
     name: 'doodle-bhictoria-bhickie-darlene-beattie',
     alt: `Character Study of expressions on faces, character Bhickie is a fiesty person`,
     fileType: '.jpg',
-    link: 'https://www.cdc.gov/tuskegee/timeline.htm',
+    link: 'none',
     title: 'My oh M.I. - Bhickie Darlene Beattie',
     description: `A character study for a now debunk comic, Bhictoria, or Bhickie for short, is an emotional, proud person who has a bit of problem fitting in. My oh M.I. is a critical look at mental illness, the causes and effects of it, and how it plays into society. More importantly, My Oh M.I. asks the critical question, what constitutes a mental illness and who has the right to define that?`,
     date: 20170220
@@ -141,7 +141,7 @@ export class IllustrationComponent implements OnInit {
     name: 'doodle-sage-markus-easom',
     alt: `Character Study of expressions on faces, character Markus is a passive, calm person`,
     fileType: '.jpg',
-    link: 'https://www.cdc.gov/tuskegee/timeline.htm',
+    link: 'none',
     title: 'My oh M.I. - Sage Markus Easom',
     description: `A character study for a now debunk comic, Sage, or better known as Markus, is a quite and timid person whose generosity is often taken for granted. My oh M.I. is a critical look at mental illness, the causes and effects of it, and how it plays into society. More importantly, My Oh M.I. asks the critical question, what constitutes a mental illness and who has the right to define that?`,
     date: 20170220

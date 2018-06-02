@@ -11,6 +11,7 @@
 
     </ul>
   </header>
+  <div id=#wrapper>
   <article>
     <figure *ngFor="let site of wordpress; let i = index" (click)="launchLightBox(wordpress, i)">
       <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
@@ -55,6 +56,7 @@
             </figcaption>
         </figure>
       </article>
+    </div>
 </main>
 <div id="dark-box" class="hide">
   <figure id="image-container" >
