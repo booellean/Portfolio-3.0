@@ -1,7 +1,5 @@
 // Global DOM behaviors, separate from all dynamically generated content behaviors
 
-console.log(`I am being activated`);
-
 window.addEventListener('scroll', headerSkillsPos);
 window.addEventListener('resize', headerSkillsPos);
 
@@ -15,16 +13,17 @@ function headerSkillsPos() {
   let docH = document.body.scrollHeight - document.body.clientHeight;
   let docDiff = docH-fMainH;
 
-  console.log(fMainH, docH, docDiff, yPos);
-
   if(yPos<hMainH){
+    //will keep the top position just under the header
     let diff = hMainH - yPos;
     sPos.style.top = `${diff}px`;
   } 
   if(yPos>=hMainH && yPos < docDiff){
+    //header is no longer viewable, will keep top position at 0
     sPos.style.top = `0px`;
   }
   if(yPos >=hMainH && yPos>=docDiff){
+    //footer is viewable, will keep top at negative value of yoffset of footer
     let diff = docDiff - yPos;
     sPos.style.top =`${diff}px`;
   }
