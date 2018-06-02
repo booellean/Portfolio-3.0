@@ -254,16 +254,15 @@ export class DesignComponent implements OnInit {
 
     drkBox.classList.remove('hide');
   }
-
   closeImageBox() {
     let drkBox = document.getElementById('dark-box');
     let reDir = document.getElementById('redirect-links');
     let webLink = document.getElementById('web-link');
-
+  
     reDir.removeChild(webLink);
     drkBox.classList.add('hide');
   }
-
+  
   detectAspectRatio() {
     let imageContainer = document.getElementById('image-container');
   

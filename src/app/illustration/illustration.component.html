@@ -12,7 +12,8 @@
 
     </ul>
   </header>
-  <div id="wrapper">
+  <div id="flex-header"></div>
+  <div id="flex-container">
     <article>
         <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(doodles, i)">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
