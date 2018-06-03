@@ -1,0 +1,17 @@
+/*stylings for all preview images*/
+
+article.portfolio-images{
+    display: flex;
+    flex-flow: row wrap;
+  }
+  
+  figure.gen-figure{
+    width: 33.33%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  figure.gen-figure>img{
+    width: 100%;
+    max-width: 100%;
+  }

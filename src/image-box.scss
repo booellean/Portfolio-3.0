@@ -1,0 +1,110 @@
+/* Stylings for responsive light-box */
+
+/*global variables*/
+$container-padding: 1em;
+$container-margin: 1em; 
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div#dark-box{
+  background-color: rgba(0, 0, 0, .6);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: opacity .7s linear, left .8s ease-in-out;
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+div#dark-box.hide{
+  opacity: 0;
+  pointer-events: none;
+}
+
+figure#image-container{
+  position: fixed;
+  margin: 2em;
+  display: flex;
+  padding: 1em;
+  height: calc(100vh - 4em);
+  border: .4em double #000000;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+figure#image-container.tall{ flex-flow: row nowrap; }
+
+figure#image-container.wide{ flex-flow: column nowrap; }
+
+figcaption#text-container {
+    flex-shrink: 1;
+}
+
+figcaption#text-container {
+  text-align: right;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  padding: 1em;
+  overflow-y: scroll;
+}
+
+figure#image-container.wide>figcaption#text-container {
+  text-align: left;
+}
+
+figcaption#text-container>p{
+  max-width: 45em;
+}
+
+figcaption#text-container>footer>nav>ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+figcaption#text-container>footer>nav>ul>li {
+  display: block;
+  list-style: none;
+}
+
+img#image-swap {
+    display: block;
+    flex-shrink: 0;
+    flex-grow: 0;
+    object-fit: contain;
+    object-position: 0% 0%;
+    max-height: 100%;
+    height: 100vh;
+}
+
+figure#image-container.wide>img#image-swap{
+  width: 100vw;
+  max-width: 100%;
+  max-height: 65vh;
+  object-position: center center;
+  height: auto;
+  margin: 0 auto;
+}
+
+img#cross{
+  position: fixed;
+  top: 1.2em;
+  left: 1.2em;
+  width: 2em;
+  height: 2em;
+  z-index: 100;
+}
+
+.hide{
+  display: none;
+  left: 100%;
+  opacity: 0;
+}
