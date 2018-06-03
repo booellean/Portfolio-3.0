@@ -28,7 +28,6 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
       ])  //end transition
     ])  //end trigger
   ]  //end animation
-  ]
 })
 export class AboutComponent implements OnInit {
 
