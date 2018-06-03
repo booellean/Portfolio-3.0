@@ -30,13 +30,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
   ]  //end animation
 })
 
-// class changeTrue {
-//   exp: boolean = false;
-// }
-
 export class WebdevComponent implements OnInit {
-
-  exp: boolean = false;
 
   imagePath = 'assets/images/webdev/';
 
@@ -100,33 +94,7 @@ export class WebdevComponent implements OnInit {
     description: `This is a static website that utilizes a user's microphone and gyroscope to create a unique user experiece where they can ask the ball a question and then "shake" for an answer. Some answers are pre-determined based on the question asked, despite if it's asked in an input field or microphone.`
     }];
 
-  constructor() {
-    // this.wordpress =[{
-    //   name: 'trefoil-cultural',
-    //   alt: 'Website Link for Trefoil Cultural and Environmental',
-    //   fileType: '.jpg',
-    //   link: 'https://trefoilcultural.com/',
-    //   github: 'https://github.com/booellean/TrefoilCultural',
-    //   title: 'Trefoil Cultural and Environmental',
-    //   description: `This is a WordPress theme derived from the twentysixteen theme, with custom code and css. This website was commissioned to combine two of the client's former websites. This involved exporting the WordPress SQL database, creating custom categories from the old sites to control how data was dynamically generated, and transferring ownership of domain.`
-    //  },{
-    //    name: 'mr-ecology',
-    //    alt: 'Website Link for Matt Rothaus Ecology',
-    //    fileType: '.jpg',
-    //    link: 'http://www.mr-ecology.com',
-    //    github: 'https://github.com/booellean/MARothaus-Blog',
-    //    title: 'Matt Rothaus Blog',
-    //    description: `This is a custom WordPress website designed without a theme template. The Form is all custom PHP code. The structure of the the DOM content proved to be a difficult case for Edge and IE browsers due to a high reliance on fixed positioning. I was able to correct this by also fixing the position of all container tags and having overflow for child elements. With clever styling, I was able to style the overflow scrollbar to look natural with the browser's window scroll.`
-    //   },{
-    //     name: 'vulpe-venture',
-    //     alt: `Website Link for Victoria Vulpe's Blog`,
-    //     fileType: '.jpg',
-    //     github: 'https://github.com/booellean/TheVulpeVenture',
-    //     link: 'http://thevulpeventure.com',
-    //     title: 'Victoria Vulpe Blog',
-    //     description: `This is a custom WordPress theme derived from the twentyseventeen theme with custom css and code. One part I am most proud of with this code was by using WordPress' custom preview images to generate wrapper backgrounds based on individual blog posts.`
-    //   }];
-   }
+  constructor() { }
 
   ngOnInit() {
   }

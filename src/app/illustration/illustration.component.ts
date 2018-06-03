@@ -84,7 +84,7 @@ export class IllustrationComponent implements OnInit {
     description: `A casual study of a crow, taken from a photograph. This study is less surreal than my other sketches and was inked to showcase the structure and texture of a real crow. Crows are one of my favorite subjects to sketch from because unlike other animals they tend to study you back.`,
     date: 20170126
   },{
-    name: 'bw-crow-invert',
+    name: 'bw-crow-invert-study',
     alt: `Crow Study One in brush and ink`,
     fileType: '.jpg',
     link: 'https://www.instagram.com/p/BWQLdISF_DN/?hl=en&taken-by=boobitters',
