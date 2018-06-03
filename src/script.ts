@@ -15,7 +15,7 @@ function headerHeight(){
   if(winHeight > bodHeight){
     sPos.style.height = `${pCHeight}px`;
   }else{
-    return;
+    sPos.style.height = '';
   }
 }
 
