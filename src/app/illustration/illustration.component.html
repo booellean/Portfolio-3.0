@@ -13,9 +13,9 @@
     </ul>
   </header>
   <div id="flex-header"></div>
-  <div id="flex-container">
+  <div id="flex-container" [@gen-figure]="doodles.length+inks.length+colorPencil.length+characterStudy.length">
     <article>
-        <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(doodles, i)">
+        <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(doodles, i)" class="gen-figure">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                       {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                       {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -36,7 +36,7 @@
           </figure>
         </article>
         <article>
-            <figure *ngFor="let study of inks; let i = index" (click)="launchLightBox(inks, i)">
+            <figure *ngFor="let study of inks; let i = index" (click)="launchLightBox(inks, i)" class="gen-figure">
               <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                           {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                           {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -57,7 +57,7 @@
               </figure>
           </article>
           <article>
-              <figure *ngFor="let study of colorPencil; let i = index" (click)="launchLightBox(colorPencil, i)">
+              <figure *ngFor="let study of colorPencil; let i = index" (click)="launchLightBox(colorPencil, i)" class="gen-figure">
                 <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                             {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                             {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,
@@ -78,7 +78,7 @@
                 </figure>
             </article>
             <article>
-                <figure *ngFor="let study of characterStudy; let i = index" (click)="launchLightBox(characterStudy, i)">
+                <figure *ngFor="let study of characterStudy; let i = index" (click)="launchLightBox(characterStudy, i)" class="gen-figure">
                   <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                               {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
                               {{imagePath}}{{study.name}}-600{{study.fileType}} 600w,

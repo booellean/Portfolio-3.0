@@ -13,9 +13,9 @@
     </ul>
   </header>
   <div id="flex-header"></div>
-  <div id="flex-container">
+  <div id="flex-container" [@gen-figure]="banners.length+logos.length+icons.length+layouts.length">
     <article>
-        <figure *ngFor="let design of banners; let i = index" (click)="launchLightBox(banners, i)">
+        <figure *ngFor="let design of banners; let i = index" (click)="launchLightBox(banners, i)" class="gen-figure">
           <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                       {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                       {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -36,7 +36,7 @@
           </figure>
         </article>
         <article>
-            <figure *ngFor="let design of logos; let i = index" (click)="launchLightBox(logos, i)">
+            <figure *ngFor="let design of logos; let i = index" (click)="launchLightBox(logos, i)" class="gen-figure">
               <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                           {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                           {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -57,7 +57,7 @@
               </figure>
           </article>
           <article>
-              <figure *ngFor="let design of icons; let i = index" (click)="launchLightBox(icons, i)">
+              <figure *ngFor="let design of icons; let i = index" (click)="launchLightBox(icons, i)" class="gen-figure">
                 <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                             {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                             {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
@@ -78,7 +78,7 @@
                 </figure>
             </article>
             <article>
-                <figure *ngFor="let design of layouts; let i = index" (click)="launchLightBox(layouts, i)">
+                <figure *ngFor="let design of layouts; let i = index" (click)="launchLightBox(layouts, i)" class="gen-figure">
                   <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                               {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
                               {{imagePath}}{{design.name}}-600{{design.fileType}} 600w,
