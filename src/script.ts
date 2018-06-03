@@ -1,6 +1,7 @@
 // Global DOM behaviors, separate from all dynamically generated content behaviors
 
 window.addEventListener('load', headerHeight);
+window.addEventListener('resize', headerHeight);
 window.addEventListener('scroll', headerSkillsPos);
 window.addEventListener('resize', headerSkillsPos);
 
