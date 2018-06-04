@@ -14,6 +14,7 @@
   <div id="flex-header"></div>
   <div id="flex-container" [@gen-figure]="wordpress.length + staticPages.length">
   <article class="portfolio-images">
+      <h2>WordPress Sites</h2>
     <figure *ngFor="let site of wordpress; let i = index" (click)="launchLightBox(wordpress, i)" class="gen-figure web">
       <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                   {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,
@@ -36,6 +37,7 @@
       </figure>
     </article>
     <article class="portfolio-images">
+        <h2>Static Sites</h2>
       <figure *ngFor="let site of staticPages; let i = index" (click)="launchLightBox(staticPages, i)" class="gen-figure web">
         <img srcset="{{imagePath}}{{site.name}}-200{{site.fileType}} 200w,
                     {{imagePath}}{{site.name}}-400{{site.fileType}} 400w,

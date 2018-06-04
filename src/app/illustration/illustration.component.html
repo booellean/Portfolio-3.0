@@ -15,6 +15,7 @@
   <div id="flex-header"></div>
   <div id="flex-container" [@gen-figure]="doodles.length+inks.length+colorPencil.length+characterStudy.length">
     <article class="portfolio-images">
+      <h2>Doodles</h2>
         <figure *ngFor="let study of doodles; let i = index" (click)="launchLightBox(doodles, i)" class="gen-figure">
           <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                       {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
@@ -36,6 +37,7 @@
           </figure>
         </article>
         <article class="portfolio-images">
+          <h2>Inks</h2>
             <figure *ngFor="let study of inks; let i = index" (click)="launchLightBox(inks, i)" class="gen-figure">
               <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                           {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
@@ -57,6 +59,7 @@
               </figure>
           </article>
           <article class="portfolio-images">
+            <h2>Color Pencil</h2>
               <figure *ngFor="let study of colorPencil; let i = index" (click)="launchLightBox(colorPencil, i)" class="gen-figure">
                 <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                             {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
@@ -78,6 +81,7 @@
                 </figure>
             </article>
             <article class="portfolio-images">
+              <h2>Character Studies</h2>
                 <figure *ngFor="let study of characterStudy; let i = index" (click)="launchLightBox(characterStudy, i)" class="gen-figure">
                   <img srcset="{{imagePath}}{{study.name}}-200{{study.fileType}} 200w,
                               {{imagePath}}{{study.name}}-400{{study.fileType}} 400w,
@@ -114,5 +118,5 @@
             </footer>
         </figcaption>
     </figure>
-    <img src="images/cross.svg" id="cross" (click)="closeImageBox()"/>
+    <img src="../assets/images/cross.svg" id="cross" (click)="closeImageBox()"/>
 </div>

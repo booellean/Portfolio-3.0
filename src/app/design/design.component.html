@@ -15,6 +15,7 @@
   <div id="flex-header"></div>
   <div id="flex-container" [@gen-figure]="banners.length+logos.length+icons.length+layouts.length">
     <article class="portfolio-images">
+      <h2>Banners</h2>
         <figure *ngFor="let design of banners; let i = index" (click)="launchLightBox(banners, i)" class="gen-figure">
           <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                       {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
@@ -36,6 +37,7 @@
           </figure>
         </article>
         <article class="portfolio-images">
+            <h2>Logos</h2>
             <figure *ngFor="let design of logos; let i = index" (click)="launchLightBox(logos, i)" class="gen-figure">
               <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                           {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
@@ -57,6 +59,7 @@
               </figure>
           </article>
           <article class="portfolio-images">
+            <h2>Icons</h2>
               <figure *ngFor="let design of icons; let i = index" (click)="launchLightBox(icons, i)" class="gen-figure">
                 <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                             {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
@@ -78,6 +81,7 @@
                 </figure>
             </article>
             <article class="portfolio-images">
+              <h2>Layouts</h2>
                 <figure *ngFor="let design of layouts; let i = index" (click)="launchLightBox(layouts, i)" class="gen-figure">
                   <img srcset="{{imagePath}}{{design.name}}-200{{design.fileType}} 200w,
                               {{imagePath}}{{design.name}}-400{{design.fileType}} 400w,
