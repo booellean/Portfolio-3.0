@@ -1,9 +1,17 @@
 // Global DOM behaviors, separate from all dynamically generated content behaviors
-
+//Regarding the main content header behavior
 window.addEventListener('load', headerHeight);
 window.addEventListener('resize', headerHeight);
 window.addEventListener('scroll', headerSkillsPos);
 window.addEventListener('resize', headerSkillsPos);
+//regarding the hamburger menu
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('hamburger').addEventListener('click', openMenu);
+});
+window.addEventListener('resize', changeMenu);
+
+//global variable for hamburger menu
+var menu = false;
 
 function headerHeight(){
   let sPos = document.getElementById('skills');
@@ -33,25 +41,62 @@ function headerSkillsPos() {
   let bodHeight = hMainH + pCHeight;
   let winHeight = window.innerHeight;
 
-  if(yPos<hMainH){
-    //will keep the top position just under the header
-    let diff = hMainH - yPos;
-    sPos.style.top = `${diff}px`;
-  } 
-  if(yPos>=hMainH && yPos < docDiff){
-    //header is no longer viewable, will keep top position at 0
-    sPos.style.top = `0px`;
-  }
-  if(yPos >=hMainH && yPos>=docDiff){
-    if(winHeight > bodHeight){
+  if(window.innerWidth <= 768){
+    sPos.style.top=`${hMainH}px`
+  }else{
+    if(yPos<hMainH){
+      //will keep the top position just under the header
       let diff = hMainH - yPos;
-    sPos.style.top = `${diff}px`;
-    }else{
-      //footer is viewable, will keep top at negative value of yoffset of footer
-      let diff = docDiff - yPos;
-      sPos.style.top =`${diff}px`;
+      sPos.style.top = `${diff}px`;
+    } 
+    if(yPos>=hMainH && yPos < docDiff){
+      //header is no longer viewable, will keep top position at 0
+      sPos.style.top = `0px`;
+    }
+    if(yPos >=hMainH && yPos>=docDiff){
+      if(winHeight > bodHeight){
+        let diff = hMainH - yPos;
+      sPos.style.top = `${diff}px`;
+      }else{
+        //footer is viewable, will keep top at negative value of yoffset of footer
+        let diff = docDiff - yPos;
+        sPos.style.top =`${diff}px`;
+      }
     }
   }
-  console.log(yPos);
+}
 
+function openMenu() {
+  // let navList = document.getElementById('route-menu');
+  // let hamMenu = document.getElementById('hamburger');
+
+  if (menu === false){
+    let navList = document.getElementById('route-menu');
+    let hamMenu = document.getElementById('hamburger');
+
+    navList.classList.add('open');
+    hamMenu.classList.add('clickEvent');
+    menu = true;
+  } else{
+    let navList = document.getElementById('route-menu');
+    let hamMenu = document.getElementById('hamburger');
+
+    navList.classList.remove('open');
+    hamMenu.classList.remove('clickEvent');
+    menu = false;
+  }
+}
+
+function changeMenu(){
+  // let navList = document.getElementById('route-menu');
+  // let hamMenu = document.getElementById('hamburger');
+
+  if (window.innerWidth >= 720){
+    let navList = document.getElementById('route-menu');
+    let hamMenu = document.getElementById('hamburger');
+
+    menu = false;
+    navList.classList.remove('open');
+    hamMenu.classList.remove('clickEvent');
+  }
 }
