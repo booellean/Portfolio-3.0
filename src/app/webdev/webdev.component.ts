@@ -32,7 +32,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 
 export class WebdevComponent implements OnInit {
 
-  imagePath = 'assets/images/webdev/';
+  imagePath = '../assets/images/webdev/';
 
   wordpress = [{
     name: 'trefoil-cultural',

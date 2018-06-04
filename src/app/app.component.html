@@ -1,6 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <header id="page-header"><!--ending header tag in app-root-->
-  <h1>{{title}}</h1>
+  <h1 id="page-title"><svg id="logo" viewBox="0 0 1050 1050"><defs>
+      <style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M592.787,516.9605c203.4211-9.6867,190.5055-119.47,306.7461-103.325,132.3852,19.3734,116.2407,196.9633,0,255.0836-45.2047,19.3735-119.47,25.8312-129.1563-32.2891,0-19.3734,0-48.4336,48.4336-32.289-12.9156,0-32.289,0-25.8312,32.289,9.6867,32.2891,106.5539,12.9156,116.2407-71.0359,9.6867-119.47-77.4938-32.2891-187.2767-25.8313C663.8229,549.25,560.4979,513.7316,592.787,516.9605Z"/><path class="cls-1" d="M654.1362,571.8519c25.8313,0,58.12,32.2891,77.4938,45.2047,19.3734,19.3734-177.59,419.7579-203.4211,419.7579s-90.4094-12.9156-106.554-32.2891l19.3735,9.6867C463.6307,1017.4411,667.0519,600.912,654.1362,571.8519Z"/><path class="cls-1" d="M373.2213,927.0317c9.6867,45.2046-61.3492,12.9156-90.4094-32.2891-25.8312-38.7469-77.4937-138.8431-32.289-203.4212,61.3492-90.4094,174.3609-25.8312,190.5055-9.6867V633.2011c-32.2891-45.2047-58.12-58.12-87.18-248.6258-25.8313-235.71,58.12-271.2282,138.843-248.6258,129.1563,38.7468,174.361,232.4813,174.361,242.168s9.6867,129.1563,32.289-9.6867C725.1722,236.0456,637.9917,87.5159,495.92,39.0823c-71.036-25.8313-274.4571-74.2649-345.4931,103.325-83.9515,203.4211,119.47,413.3,103.3251,432.6735C234.3783,587.9964,92.3064,639.659,118.1377,794.6465s177.59,222.7945,248.6258,235.71,48.4336-103.325,48.4336-119.47l-77.4938-83.9516C340.9323,823.7067,360.3057,855.9957,373.2213,927.0317Z"/><image width="1332" height="1481" transform="translate(-1264.1685 -262.9901)</svg>{{title}}</h1>
   <div id="hamburger">
     <div></div>
     <div></div>
@@ -19,6 +20,24 @@
 <router-outlet></router-outlet>
 
 <footer id="page-footer">
+
+  <div id="footer-wrapper">
+      <aside id="footer-bio">
+        <h3>~Secret Bio about Elle~</h3>
+        <p>Ultimately, I have a lot of passion in what I do. I strive for excellency in everything and due to this, I am also a very busy person. So, please keep your questions short!</p>
+        <p>Truth be told, I do not care what pronouns you call me, and I refer to myself as "they" in my about section to explain myself best. I am gender queer and I actually prefer that people call me by the pronouns they are most comfortable calling me.</p>
+        <p>Favorite Animals are rats and crows!</p>
+      </aside>
+  
+      <nav id="social-footer">
+        <ul>
+          <li><a href="https://github.com/booellean" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a href="https://booellean.tumblr.com/" target="_blank"><i class="fab fa-tumblr-square"></i></a></li>
+          <li><a href="https://www.instagram.com/boobitters/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://twitter.com/boobitters" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+      </nav>
+    </div>
   
   <form name="contactMe" id="contact-me">
     <label for="partyName">Name:</label><input type="text" id="partyName"><br>
@@ -29,22 +48,6 @@
     </textarea><br>
     <button id="submitForm">Send</button>
   </form>
-
-  <aside id="footer-bio">
-    <h3>~Secret Bio about Elle~</h3>
-    <p>Ultimately, I have a lot of passion in what I do. I strive for excellency in everything and due to this, I am also a very busy person. So, please keep your questions short!</p>
-    <p>Truth be told, I do not care what pronouns you call me, and I refer to myself as "they" in my about section to explain myself best. I am gender queer and I actually prefer that people call me by the pronouns they are most comfortable calling me.</p>
-    <p>Favorite Animals are rats and crows!</p>
-  </aside>
-
-  <nav id="social-footer">
-    <ul>
-      <li><a href="https://github.com/booellean" target="_blank"><i class="fab fa-github"></i></a></li>
-      <li><a href="https://booellean.tumblr.com/" target="_blank"><i class="fab fa-tumblr-square"></i></a></li>
-      <li><a href="https://www.instagram.com/boobitters/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://twitter.com/boobitters" target="_blank"><i class="fab fa-twitter"></i></a></li>
-    </ul>
-  </nav>
 
   <small id="copyright">
     <p id="copyright">&copy;2017</p>

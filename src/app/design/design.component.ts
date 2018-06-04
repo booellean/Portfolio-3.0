@@ -31,7 +31,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 export class DesignComponent implements OnInit {
 
-  imagePath = 'assets/images/design/';
+  imagePath = '../assets/images/design/';
 
   banners =[{
      name: 'banner-circuit-board',

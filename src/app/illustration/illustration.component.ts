@@ -31,7 +31,7 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 export class IllustrationComponent implements OnInit {
 
-  imagePath = 'assets/images/illustration/';
+  imagePath = '../assets/images/illustration/';
 
   doodles =[{
     name: 'doodle-old-lady',
