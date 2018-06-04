@@ -20,7 +20,7 @@ div#dark-box{
   transition: opacity .7s linear, left .8s ease-in-out;
   opacity: 1;
   pointer-events: auto;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 div#dark-box.hide{
@@ -53,7 +53,7 @@ figcaption#text-container {
   flex-flow: column nowrap;
   justify-content: space-between;
   padding: 1em;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 figure#image-container.wide>figcaption#text-container {
@@ -62,6 +62,14 @@ figure#image-container.wide>figcaption#text-container {
 
 figcaption#text-container>p{
   max-width: 45em;
+  color: #48494c;
+  text-shadow: none;
+  font-size: 1.5em;
+}
+figcaption#text-container>h1{
+  color: #48494c;
+  font-size: 3em;
+  text-shadow: none;
 }
 
 figcaption#text-container>footer>nav>ul{
@@ -73,6 +81,19 @@ figcaption#text-container>footer>nav>ul{
 figcaption#text-container>footer>nav>ul>li {
   display: block;
   list-style: none;
+}
+figcaption#text-container>footer>nav>ul>li>a{
+  color: #48494c;
+  text-shadow: none;
+  font-size: 2em;
+}
+
+figcaption#text-container>footer>nav>ul>li>a:hover{
+  color:#66c7f4;
+}
+
+figcaption#text-container>footer>nav>ul>li>a:active{
+  color: #e52d6b;
 }
 
 img#image-swap {
