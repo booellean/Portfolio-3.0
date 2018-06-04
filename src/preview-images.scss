@@ -1,17 +1,114 @@
 /*stylings for all preview images*/
 
+$fig-height: 15em;
+$neg-pos: -15em;
+
+div#flex-container{
+    padding: 0 0 0 1em;
+}
+
 article.portfolio-images{
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-end;
   }
-  
-  figure.gen-figure{
-    width: 33.33%;
-    height: auto;
-    cursor: pointer;
+
+  figure.gen-figure {
+	display: block;
+	background: #ffffff;
+	width: 33.33%;
+	height: $fig-height;
+	overflow: hidden;
+	padding: 0;
+	cursor: pointer;
+	z-index: 2;
+    box-shadow: none;
+    img{
+        display: block;
+        transition: opacity .2s linear, box-shadow 1s linear;
+        object-fit: cover;
+        width: 120%;
+        height: 100%;
+        object-position: 50% 50%;
+        box-shadow: inset 0 0 1.3em .7em  rgba(255, 255, 255, .9);
+    }
+    figcaption{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        position: relative;
+        top: $neg-pos;
+        width: 100%;
+        height: $fig-height;
+        padding: 2em;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity .21s ease-out;
+        z-index: 10;
+        h3{
+            color: #48494c;
+            text-shadow: .1em .1em 0em #ffffff;
+            font-size: 1.9em;
+        }
+        a{
+            color: #48494c;
+            text-shadow: .1em .1em 0em #ffffff;
+            font-size: 2em;
+        }
+    figcaption:hover{
+        nav{
+            a:hover{
+                color: #66c7f4;
+            }
+        }
+    }
+    figcaption:active{
+        nav{
+            a:active{
+                color: #e52d6b;
+            }
+        }
+        }
+    }
+}
+
+figure.gen-figure.web{
+    img{
+        object-position: 0% 50%;
+    }
+}
+
+figure.gen-figure:hover {
+    box-shadow: inset 0 0 5em .3em #66c7f4;
+    img{
+        opacity: .2;
+    }
+    figcaption {
+        opacity: 1;
+    }
+}
+
+figure.gen-figure:active {
+    box-shadow: inset 0 0 5em .3em #ff76a4;
+    img{
+        opacity: .1;
+    }
+}
+
+@media screen and (max-width: 66.625em){
+    figure.gen-figure {
+        width: 50%;
+    }
   }
-  
-  figure.gen-figure>img{
-    width: 100%;
-    max-width: 100%;
-  }
+
+@media screen and (max-width: 48em){
+    div#flex-container{
+        padding: 0 0 0 0;
+    }
+}
+
+@media screen and (max-width: 39.375em){
+    figure.gen-figure {
+        width: 100%;
+    }
+}
