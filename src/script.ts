@@ -1,14 +1,16 @@
 // Global DOM behaviors, separate from all dynamically generated content behaviors
 //Regarding the main content header behavior
-window.addEventListener('load', headerHeight);
-window.addEventListener('resize', headerHeight);
-window.addEventListener('scroll', headerSkillsPos);
-window.addEventListener('resize', headerSkillsPos);
-//regarding the hamburger menu
 document.addEventListener('DOMContentLoaded', function(){
+  window.addEventListener('load', headerHeight);
+  window.addEventListener('resize', headerHeight);
+  window.addEventListener('scroll', headerSkillsPos);
+  window.addEventListener('resize', headerSkillsPos);
+  //regarding the hamburger menu
+
   document.getElementById('hamburger').addEventListener('click', openMenu);
+
+  window.addEventListener('resize', changeMenu);
 });
-window.addEventListener('resize', changeMenu);
 
 //global variable for hamburger menu
 var menu = false;
