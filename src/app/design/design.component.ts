@@ -233,6 +233,7 @@ export class DesignComponent implements OnInit {
   }
 
   launchLightBox(arr, i){
+    let htmlTag = document.querySelector('html');
     let drkBox = document.getElementById('dark-box');
     let imgCont = document.getElementById('image-swap');
     let figCap = document.getElementById('text-container');
@@ -275,14 +276,17 @@ export class DesignComponent implements OnInit {
     }
 
     drkBox.classList.remove('hide');
+    htmlTag.style.overflow = 'hidden';
   }
   closeImageBox() {
+    let htmlTag = document.querySelector('html');
     let drkBox = document.getElementById('dark-box');
     let reDir = document.getElementById('redirect-links');
     let webLink = document.getElementById('web-link');
   
     reDir.removeChild(webLink);
     drkBox.classList.add('hide');
+    htmlTag.style.overflow = '';
   }
   
   detectAspectRatio() {

@@ -106,7 +106,7 @@
 </main>
 <div id="dark-box" class="hide">
     <figure id="image-container">
-        <img id="image-swap" (load)="detectAspectRatio()">
+        <img id="image-swap" (load)="detectAspectRatio()" (window:resize)="detectAspectRatio()">
         <figcaption id="text-container">
             <h1 id="swap-h1"></h1>
             <p id="swap-p"></p>
