@@ -17,7 +17,22 @@ html, body{
   height: 100%;
 }
 
-a {text-decoration: none;}
+body{
+  overflow-x:hidden;
+}
+
+html {
+  background: center / cover no-repeat url("assets/images/background.png");
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 100.5em){
+  html {
+    background: none;
+  }
+}
+
+a {text-decoration: none; transition: color .1s linear;}
 
 p, a, h1, h2, h3, h4, h5, h6, li, ul form, label {
   color: #ffffff;
@@ -29,7 +44,7 @@ p, a, li, label, textarea, input {
 }
 
 textarea, input{
-  color: #48494c
+  color: #48494c;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -315,9 +330,11 @@ main{
   width: 80%;
   margin: 0 auto;
   min-width: 100em;
+  background-color: #ffffff;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 #flex-header{
@@ -326,7 +343,7 @@ main{
     width: $h-skills-width;
 }
 
-@media screen and (max-width: 100em){
+@media screen and (max-width: 100.5em){
   main{width: 100%; min-width: 100%;}
 }
 
