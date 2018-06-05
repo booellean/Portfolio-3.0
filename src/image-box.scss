@@ -4,12 +4,6 @@
 $container-padding: 1em;
 $container-margin: 1em; 
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 div#dark-box{
   background-color: rgba(0, 0, 0, .6);
   width: 100%;
@@ -34,9 +28,10 @@ figure#image-container{
   display: flex;
   padding: 1em;
   height: calc(100vh - 4em);
-  border: .4em double #000000;
+  border: .4em double #48494c;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, 1);
+  border-radius: 1em;
 }
 
 figure#image-container.tall{ flex-flow: row nowrap; }
@@ -70,6 +65,7 @@ figcaption#text-container>h1{
   color: #48494c;
   font-size: 3em;
   text-shadow: none;
+  padding-bottom: .5em;
 }
 
 figcaption#text-container>footer>nav>ul{
@@ -81,6 +77,7 @@ figcaption#text-container>footer>nav>ul{
 figcaption#text-container>footer>nav>ul>li {
   display: block;
   list-style: none;
+  padding: .5em 1em;
 }
 figcaption#text-container>footer>nav>ul>li>a{
   color: #48494c;
@@ -98,6 +95,10 @@ figcaption#text-container>footer>nav>ul>li>a:active{
 
 img#image-swap {
     display: block;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 80%,rgba(255,255,255,0) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 80%,rgba(255,255,255,0) 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 );
     flex-shrink: 0;
     flex-grow: 0;
     object-fit: contain;
@@ -122,6 +123,7 @@ img#cross{
   width: 2em;
   height: 2em;
   z-index: 100;
+  cursor: pointer;
 }
 
 .hide{
